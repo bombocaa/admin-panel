@@ -1,0 +1,285 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+.profile-container {
+    width: 100%;
+    height: 46rem;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 5rem;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-avatar {
+    margin-right: 20px;
+    position: relative;
+}
+
+.profile-divider {
+    width: 3px;
+    height: 90px;
+    background: #e0e0e0;
+    margin: 0 24px;
+    border-radius: 1px;
+}
+
+.avatar-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 15px;
+    object-fit: cover;
+    font-size: 60px;
+    color: #406e47;
+}
+
+.profile-info {
+    flex-grow: 1;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    color: #333;
+}
+
+.profile-email {
+    font-size: 16px;
+    margin-top: -1.5rem;
+    color: #666;
+}
+
+.profile-details {
+    margin-bottom: 20px;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.detail-title {
+    font-size: 16px;
+    font-weight: 500;
+    color: #555;
+}
+
+.detail-value {
+    font-size: 16px;
+    color: #333;
+}
+
+.audit-log {
+    margin-top: 30px;
+}
+
+.audit-log h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.log-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.log-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    margin-right: 16px;
+}
+
+.log-action {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.log-details {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.4;
+}
+
+.log-time {
+    font-size: 12px;
+    color: #888;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.log-list {
+    max-height: 225px;
+    overflow-y: auto;
+    padding-right: 8px;
+}
+
+/* Custom scrollbar for log list */
+.log-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.log-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.log-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.log-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.profile-section-divider {
+    width: 70%;
+    height: 3px;
+    background: #e0e0e0;
+    margin-top: 3rem;
+    margin-left: 15%;
+    border-radius: 1px;
+}
+
+.editable-detail {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.edit-icon {
+    margin-right: 8px;
+    color: #406e47;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.edit-icon-name {
+    margin-left: 15px;
+    margin-top: 2px;
+  }
+
+  .edit-icon-email {
+    margin-left: 15px;
+    margin-top: -2.5rem;
+  }
+
+.editable-detail:hover .edit-icon {
+    display: inline;
+}
+
+/* Modern input style for editable fields */
+.editable-detail input.profile-name,
+.editable-detail input.profile-email,
+.editable-detail input.detail-value {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #222;
+    border: 1.5px solid #e0e0e0;
+    background: #f7f9fa;
+    border-radius: 8px;
+    padding: 8px 14px;
+    margin-right: 8px;
+    outline: none;
+    transition: border 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(64, 110, 71, 0.04);
+}
+
+.editable-detail input.profile-email {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #555;
+}
+
+.detail-item .editable-detail.detail-value {
+    flex: initial;
+    max-width: 220px;
+    width: auto;
+}
+
+.editable-detail input.detail-value {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    height: 1.7rem;
+    padding: 4px 8px;
+    margin-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.editable-detail input:focus {
+    border: 1.5px solid #406e47;
+    height: 2rem;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(64, 110, 71, 0.10);
+}
+
+/* Spacing between name and email */
+.profile-info .editable-detail + .editable-detail {
+    margin-top: 0.5rem;
+}
+
+.edit-icon-avatar {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    color: #406e47;
+    cursor: pointer;
+    font-size: 1.2em;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    transition: color 0.2s;
+}
+
+.edit-icon-avatar:hover {
+    color: #2d4d31;
+}
+
+.time-btn {
+  padding: 6px 12px;
+  background-color: #A0C878;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.time-btn:hover {
+  background-color: #8ab066;
+}
+
+.time-btn:active {
+  background-color: #769c54;
+}

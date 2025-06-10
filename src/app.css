@@ -1,0 +1,9 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.App h1{
+    text-align: center;
+    justify-content: center;
+    margin-left: 5rem;
+}

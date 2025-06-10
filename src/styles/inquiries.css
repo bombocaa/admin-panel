@@ -1,0 +1,330 @@
+.inquiries-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    max-width: 120%;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    height: 47rem;
+  }
+  
+  .inquiries-title {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+  }
+  
+  .inquiries-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .inquiries-table th, 
+  .inquiries-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+  }
+  
+  .inquiries-table th {
+    background-color: #f4f4f4;
+    color: #555;
+  }
+  .inquiries-table td{
+    font-size: 15px;
+  }
+  
+  .inquiry-row {
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .inquiry-row:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .inquiry-row td {
+    vertical-align: middle;
+  }
+  
+  .reply-button,
+  .delete-button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-right: 10px;
+  }
+  
+  .reply-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+  }
+  
+  .reply-button:hover {
+    background-color: #45a049;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .modal-content-1 {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  .modal-content-1 h3 {
+    margin-bottom: 24px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+  }
+  
+  .modal-details-single-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 32px;
+  }
+  
+  .modal-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+  
+  .modal-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
+    text-align: left;
+  }
+  
+  .info-label {
+    font-weight: 600;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .info-value {
+    color: #333;
+    font-size: 15px;
+  }
+  
+  .message-section {
+    border-top: 1px solid #eee;
+  }
+  
+  .message-section h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .message-content {
+    background-color: #f7f9fc;
+    padding: 20px;
+    border-radius: 12px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 15px;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    resize: vertical;
+  }
+  
+  .cancel-button,
+  .submit-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .cancel-button {
+    background-color: #ddd;
+    color: #333;
+    border: none;
+  }
+  
+  .cancel-button:hover {
+    background-color: #ccc;
+  }
+  
+  .submit-button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+  }
+  
+  .submit-button:hover {
+    background-color: #45a049;
+  }
+  
+  /* --- SEARCH BAR (copied from tenants) --- */
+  .tenant-search-bar {
+    display: flex;
+    align-items: center;
+    background: #f5f6fa;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px rgba(160, 200, 120, 0.08);
+    padding: 0 1rem;
+    height: 44px;
+    min-width: 320px;
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-top: -2rem;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+  
+  .tenant-search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+    width: 100%;
+    color: #333;
+    border-radius: 24px;
+  }
+  
+  .tenant-search-bar .search-icon {
+    position: absolute;
+    left: 1.2rem;
+    color: #A0C878;
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
+  
+  .inquiry-search-bar {
+    display: flex;
+    align-items: center;
+    background: #f5f6fa;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px rgba(160, 200, 120, 0.08);
+    padding: 0 1rem;
+    height: 44px;
+    min-width: 320px;
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    margin-top: -2rem;
+    margin-left: 0;
+    margin-right: 0;
+    position: relative;
+  }
+  
+  .inquiry-search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+    width: 100%;
+    color: #333;
+    border-radius: 24px;
+  }
+  
+  .inquiry-search-bar .search-icon {
+    position: absolute;
+    left: 1.2rem;
+    color: #A0C878;
+    font-size: 1.1rem;
+    pointer-events: none;
+  }
+  
+  /* --- SORT ICONS --- */
+  .sort-icon, .fa-sort-up, .fa-sort-down {
+    margin-left: 6px;
+    color: #b0b0b0;
+    font-size: 1rem;
+    vertical-align: middle;
+    transition: color 0.2s;
+  }
+  
+  th[style*="cursor: pointer"]:hover .sort-icon,
+  th[style*="cursor: pointer"]:hover .fa-sort-up,
+  th[style*="cursor: pointer"]:hover .fa-sort-down {
+    color: #32c86c;
+  }
+  
+  .inquiries-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .inquiries-pagination .pagination-btn {
+    background: none;
+    border: none;
+    color: #A0C878;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: color 0.2s;
+  }
+  
+  .inquiries-pagination .pagination-btn:hover {
+    color: #7da35f;
+  }
+  
+  .inquiries-pagination .pagination-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  .inquiries-pagination .page-info {
+    color: #666;
+    font-size: 0.9rem;
+  }
+  

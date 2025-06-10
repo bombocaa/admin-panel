@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.register-container {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+
+  .logo-section {
+    width: 50%;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+  }
+  
+
+    .form-section {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1{
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: bolder ;
+  }
+  
+  .form-wrapper {
+    width: 100%;
+    max-width: 400px;
+    padding: 2rem;
+  }
+  
+  .form-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #333;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group label {
+    margin-bottom: 0.3rem;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .form-group .register-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    width: 90%;
+    font-size: 14px;
+  }
+  
+  /* Register Form Submit Button - More specific selector */
+  .register-container .form-wrapper .form .register-form-submit-button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 90%;
+  }
+  
+  .register-container .form-wrapper .form .register-form-submit-button:hover {
+    background-color: #399e3d;
+  }
+  
+  .register-container .form-wrapper .form .register-form-submit-button:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 1200px) {
+    .form-group .register-input,
+    .register-container .form-wrapper .form .register-form-submit-button {
+        width: 70%;
+    }
+  }
+  
+  @media screen and (max-width: 992px) {
+    .form-group .register-input,
+    .register-container .form-wrapper .form .register-form-submit-button {
+        width: 80%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .form-group .register-input,
+    .register-container .form-wrapper .form .register-form-submit-button {
+        width: 90%;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .form-group .register-input,
+    .register-container .form-wrapper .form .register-form-submit-button {
+        width: 100%;
+    }
+  }
+  
+  .form-footer {
+    margin-top: 1rem;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .form-footer a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  
+  .form-footer a:hover {
+    text-decoration: underline;
+  }
+  

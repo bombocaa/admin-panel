@@ -1,0 +1,397 @@
+.messages-container {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  max-width: 120%;
+  margin-left: 2rem;
+  margin-top: 4rem;
+  height: 47rem;
+}
+
+.messages-title {
+  font-size: 2rem;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  margin-top: 0.5rem;
+}
+
+.messages-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.messages-table th,
+.messages-table td {
+  padding: 12px;
+  text-align: left;
+  width: 25rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.messages-table th {
+  background-color: #f9fafb;
+  color: #555;
+}
+
+.messages-table td {
+  font-size: 15px;
+  color: #444;
+}
+
+/* Table Row Hover */
+.messages-table tr {
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.messages-table tr:hover {
+  background-color: #f1f5f9;
+}
+
+/* View Button */
+.view-btn {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #43a047;
+}
+
+/* MODAL (Overlay + Content) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(30, 30, 30, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Modal Content Container */
+.modal-content {
+  background-color: #ffffff;
+  padding: 80px;
+  border-radius: 16px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  animation: scaleIn 0.3s ease-in-out;
+  position: relative;
+  text-align: left;
+}
+
+/* Modal Title (for Reply and View Message) */
+.modal-content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 20px;
+}
+
+.modal-content h3,
+.modal-content p {
+  text-align: left;
+}
+
+/* Textarea for Reply */
+textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 28px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  resize: none; /* Fully disables resizing */
+  box-sizing: border-box; /* Ensures it fits perfectly inside */
+}
+
+/* Modal Buttons */
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Cancel Button */
+.cancel-button {
+  background-color: #f0f2f5;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cancel-button:hover {
+  background-color: #e0e2e7;
+}
+
+/* Submit (Send Reply) Button */
+.submit-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #43a047;
+}
+
+/* View Full Message Styles */
+.view-message-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.view-message-details {
+  font-size: 28px;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.message-content {
+  margin-top: 20px;
+  background-color: #f7f9fc;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 19px;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+/* Animations for Modal */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* --- SEARCH BAR (copied from tenants) --- */
+.tenant-search-bar {
+  display: flex;
+  align-items: center;
+  background: #f5f6fa;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(160, 200, 120, 0.08);
+  padding: 0 1rem;
+  height: 44px;
+  min-width: 320px;
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+
+.tenant-search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+  width: 100%;
+  color: #333;
+  border-radius: 24px;
+}
+
+.tenant-search-bar .search-icon {
+  position: absolute;
+  left: 1.2rem;
+  color: #A0C878;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.message-search-bar {
+  display: flex;
+  align-items: center;
+  background: #f5f6fa;
+  border-radius: 24px;
+  box-shadow: 0 2px 8px rgba(160, 200, 120, 0.08);
+  padding: 0 1rem;
+  height: 44px;
+  min-width: 320px;
+  max-width: 420px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  margin-top: -2rem;
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+}
+
+.message-search-bar input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+  width: 100%;
+  color: #333;
+  border-radius: 24px;
+}
+
+.message-search-bar .search-icon {
+  position: absolute;
+  left: 1.2rem;
+  color: #A0C878;
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+/* --- SORT ICONS --- */
+.sort-icon, .fa-sort-up, .fa-sort-down {
+  margin-left: 6px;
+  color: #b0b0b0;
+  font-size: 1rem;
+  vertical-align: middle;
+  transition: color 0.2s;
+}
+
+th[style*="cursor: pointer"]:hover .sort-icon,
+th[style*="cursor: pointer"]:hover .fa-sort-up,
+th[style*="cursor: pointer"]:hover .fa-sort-down {
+  color: #32c86c;
+}
+
+/* Pagination Styles */
+.messages-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.messages-pagination .pagination-btn {
+  background: none;
+  border: none;
+  color: #A0C878;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: color 0.2s;
+}
+
+.messages-pagination .pagination-btn:hover {
+  color: #7da35f;
+}
+
+.messages-pagination .pagination-btn:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.messages-pagination .page-info {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+/* Print Styles */
+@media print {
+  .messages-pagination {
+    display: none;
+  }
+  
+  /* ... rest of the print styles ... */
+}
+
+/* Reply Button */
+.reply-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.reply-button:hover {
+  background-color: #43a047;
+}
+
+.reply-button svg {
+  font-size: 16px;
+}
+
+/* Reply Modal Specific Styles */
+.reply-textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  margin: 20px 0;
+  resize: vertical;
+  min-height: 150px;
+  font-family: inherit;
+}
+
+.reply-textarea:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
+}
+
+.send-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 10px;
+  margin-top: 10px;
+  height: 40px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.send-button:hover {
+  background-color: #43a047;
+}

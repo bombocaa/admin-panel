@@ -1,0 +1,201 @@
+.audit-log-container {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: "Poppins", sans-serif;
+    max-width: 95%;
+    margin-left: 2rem;
+    margin-top: 4rem;
+    height: 47rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 600px;
+}
+
+.audit-log-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    text-align: left;
+    letter-spacing: -1px;
+}
+
+.audit-print-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -9rem;
+    margin-right: 2rem;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.audit-print-button:hover {
+    background-color: #357abd;
+  }
+
+.audit-log-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.audit-log-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.audit-log-table th,
+.audit-log-table td {
+    padding: 11.5px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.audit-log-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    letter-spacing: 0.5px;
+}
+
+.audit-log-table tr:hover {
+    background-color: #f3f6f4;
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 900px) {
+    .audit-log-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.7rem;
+        padding: 1rem 0.5rem;
+    }
+    .audit-log-container {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+        padding: 10px;
+    }
+    .audit-log-title {
+        font-size: 1.3rem;
+    }
+}
+
+.audit-log-search-bar {
+    display: flex;
+    align-items: center;
+    background: #f6f7fb;
+    border-radius: 24px;
+    box-shadow: 0 2px 8px rgba(64, 110, 71, 0.08);
+    padding: 0 1rem;
+    height: 44px;
+    min-width: 320px;
+    max-width: 420px;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    position: relative;
+}
+
+.audit-log-search-bar input {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 2.2rem;
+    width: 100%;
+    color: #333;
+    border-radius: 24px;
+}
+
+.audit-log-search-bar .search-icon {
+    position: absolute;
+    left: 1.2rem;
+    color: #A0C878;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.audit-log-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    gap: 15px;
+    padding: 10px 0;
+    background: none;
+    position: static;
+    box-shadow: none;
+}
+
+.audit-log-pagination .pagination-btn {
+    background: none;
+    border: none;
+    color: #406e47;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    transition: color 0.2s;
+    border-radius: 6px;
+}
+
+.audit-log-pagination .pagination-btn:hover:not(:disabled) {
+    color: #7bb661;
+    background: #f6f7fb;
+}
+
+.audit-log-pagination .pagination-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    background: none;
+}
+
+.audit-log-pagination .page-info {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  .audit-log-table-container, .audit-log-table-container * {
+    visibility: visible !important;
+  }
+  .audit-log-table-container {
+    position: absolute !important;
+    left: -17.5rem;
+    top: -2rem;
+    background: white !important;
+
+  }
+}
+
+.audit-log-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+} 

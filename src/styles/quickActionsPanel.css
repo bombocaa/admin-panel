@@ -1,0 +1,54 @@
+.quick-actions-panel {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 1.25rem 2rem;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-left: 0rem;
+  width: 98%;   
+  z-index: 0;
+}
+
+.quick-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #f4f6f8 60%, #e8f5e9 100%);
+  color: #333;
+  border: none;
+  border-radius: 10px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(160, 200, 120, 0.08);
+  transition: background 0.2s, box-shadow 0.2s, color 0.2s;
+}
+
+.quick-action-btn:hover {
+  background: #a0c878 ;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(160, 200, 120, 0.18);
+}
+
+.quick-action-icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .quick-actions-panel {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+  .quick-action-btn {
+    width: 100%;
+    justify-content: center;
+  }
+} 

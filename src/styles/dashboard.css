@@ -1,0 +1,243 @@
+body {
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.dashboard-container {
+  padding: 2rem;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Grid Items */
+.grid-item {
+  background: #ffffff;
+  border-radius: 20px;
+  margin-top: -0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 1.8rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+/* Tenant Stats Cards */
+.grid-item.tenant-stats {
+  grid-column: span 1;
+}
+
+.tenant-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  flex-shrink: 0;
+}
+
+.tenant-icon {
+  font-size: 1.75rem;
+  color: #A0C878;
+}
+
+.tenant-right {
+  flex: 1;
+  margin-left: 0.75rem;
+  text-align: left;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.tenant-title {
+  font-size: 0.875rem;
+  color: #B0B0B0;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.grid-item tenant-stats{
+  width: 20rem;
+}
+
+.tenant-count {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.room-maintenance-overview {
+  grid-column: span 2;
+}
+
+.room-maintenance-overview .chart-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tenant-divider {
+  border-bottom: 2px solid #E0E0E0;
+  margin: 0.25rem 0;
+}
+
+.tenant-month-update {
+  font-size: 0.75rem;
+  color: #4CAF50;
+  font-weight: 600;
+}
+
+/* Maintenance Chart */
+.grid-item.maintenance-chart {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 70rem;
+}
+
+.grid-item.maintenance-chart h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Tenant Growth Chart */
+.grid-item.growth-chart {
+  grid-column: span 2;
+  grid-row: span 2;
+  height: 25rem;
+}
+
+.grid-item.growth-chart h2 {
+  text-align: center;
+  color: #333;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Chart.js Custom Styling */
+.chartjs-legend {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.chartjs-tooltip {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 0.875rem;
+}
+
+/* Responsive Design */
+/* Large Screens (1921px and above) */
+@media screen and (min-width: 1921px) {
+  .dashboard-grid {
+    max-width: 1800px;
+    gap: 2rem;
+  }
+}
+
+/* Desktop (1440px and below) */
+@media screen and (max-width: 1440px) {
+  .dashboard-grid {
+    max-width: 1200px;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet Landscape (1024px and below) */
+@media screen and (max-width: 1024px) {
+  .dashboard-container {
+    padding: 1.5rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .grid-item {
+    padding: 1.5rem;
+  }
+
+  .grid-item.maintenance-chart,
+  .grid-item.growth-chart {
+    grid-column: span 2;
+  }
+}
+
+/* Tablet Portrait (768px and below) */
+@media screen and (max-width: 768px) {
+  .dashboard-container {
+    padding: 1rem;
+  }
+
+  .dashboard-grid {
+    gap: 0.75rem;
+  }
+
+  .grid-item {
+    padding: 1.25rem;
+  }
+
+  .grid-item h2 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .tenant-count {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile (480px and below) */
+@media screen and (max-width: 480px) {
+  .dashboard-container {
+    padding: 0.75rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .grid-item {
+    padding: 1rem;
+  }
+
+  .grid-item h2 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .tenant-left {
+    width: 30px;
+    height: 30px;
+  }
+
+  .tenant-icon {
+    font-size: 1.5rem;
+  }
+
+  .tenant-count {
+    font-size: 1rem;
+  }
+}
