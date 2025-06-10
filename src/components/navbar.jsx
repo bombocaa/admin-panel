@@ -19,6 +19,18 @@ function Navbar() {
   const location = useLocation();
   const notificationsRef = useRef([]);
 
+  // Add markAllAsUnread handler
+  const handleMarkAllAsUnread = () => {
+    setNotifications(prev => prev.map(n => ({ ...n, read: false })));
+    setUnreadCount(notifications.length);
+  };
+
+  // Add markAllAsRead handler
+  const handleMarkAllAsRead = () => {
+    setNotifications(prev => prev.map(n => ({ ...n, read: true })));
+    setUnreadCount(0);
+  };
+
   // Expanded static keyword-to-page mapping
   const keywordMap = {
     // Dashboard
@@ -455,6 +467,24 @@ function Navbar() {
                   </div>
                 )}
               </div>
+              {notifications.length > 0 && (
+                <div className="notification-footer">
+                  <div className="notification-actions">
+                    <button 
+                      className="mark-read-btn"
+                      onClick={handleMarkAllAsRead}
+                    >
+                      Mark all as read
+                    </button>
+                    <button 
+                      className="mark-unread-btn"
+                      onClick={handleMarkAllAsUnread}
+                    >
+                      Mark all as unread
+                    </button>
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
