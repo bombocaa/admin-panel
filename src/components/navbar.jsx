@@ -143,7 +143,6 @@ function Navbar() {
     data: "/reports",
     print: "/reports",
     printing: "/reports",
-    summary: "/reports",
     summaries: "/reports",
     // Profile
     profile: "/profile",
